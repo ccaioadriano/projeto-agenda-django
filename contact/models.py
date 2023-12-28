@@ -8,3 +8,7 @@ class Contact(models.Model):
     email = models.EmailField(max_length=254, blank=True)
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(default=current_date)
+    
+    #toString
+    def __str__(self) -> str:
+        return f'{self.first_name} {self.last_name}'
